@@ -1,0 +1,19 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-light" id="left-panel">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+            <div class="flex-column">
+                
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Employee" asp-action="Index">Employees</a></li>
+                <li><a asp-controller="Employee" asp-action="SalaryDetails">SalaryDetails</a></li>
+                    <li><a asp-controller="Company" asp-action="Index">Companies</a></li>
+                    <li><a asp-action="Privacy">Privacy</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+

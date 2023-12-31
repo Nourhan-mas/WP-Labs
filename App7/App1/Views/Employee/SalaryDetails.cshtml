@@ -1,0 +1,45 @@
+﻿@model IEnumerable<App1.Models.EmployeeSalaryDto>
+
+@{
+   	Layout = ViewBag.Layout;
+    ViewData["Title"] = "SalaryDetails";
+}
+
+<h1>SalaryDetails</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NetSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GrossSalary)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var salary in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => salary.FullName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => salary.CompanyName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => salary.NetSalary)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => salary.GrossSalary)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<App1.Models.CompanyDetailsDto>
+
+@{
+    Layout = ViewBag.Layout;
+    ViewData["Title"] = "Index";
+}
+
+<h1>Companies</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfEmployees)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var Company in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => Company.Name)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => Company.FullAddress)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => Company.NumberOfEmployees)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
